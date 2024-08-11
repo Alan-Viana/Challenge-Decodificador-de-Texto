@@ -196,7 +196,7 @@ button:active {
 /* Mobile */
 @media (max-width: 480px) {
     .saida-section {
-        margin-top: 20px; /* Espaço acima da seção de saída */
+        margin-top: 40px; 
     }
 
     .botoes {
