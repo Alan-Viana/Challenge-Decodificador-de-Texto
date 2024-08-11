@@ -3,21 +3,19 @@ const mensagem = document.querySelector(".mensagem");
 const btnCopiar = document.querySelector(".btn-copiar");
 const mensagemCopiado = document.getElementById("mensagem-copiado");
 
-// Função para remover acentos e caracteres especiais
 function removerCaracteresEspeciais(texto) {
     return texto
-        .normalize('NFD') // Normaliza o texto para decompor acentos
-        .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-        .replace(/[^a-z\s]/g, ''); // Remove caracteres especiais
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z\s]/g, ''); 
 }
 
-// Função para validar a entrada e permitir apenas letras minúsculas
 function validarEntrada(event) {
     const textoAtual = event.target.value;
     const textoValido = textoAtual
-        .normalize('NFD') // Normaliza o texto para decompor acentos
-        .replace(/[\u0300-\u036f]/g, '') // Remove acentos
-        .replace(/[^a-z\s]/g, ''); // Remove caracteres especiais
+        .normalize('NFD') 
+        .replace(/[\u0300-\u036f]/g, '') 
+        .replace(/[^a-z\s]/g, ''); 
     event.target.value = textoValido;
 }
 
