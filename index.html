@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Decodificador</title>
+</head>
+<body>
+    <header>
+        <img class="logoAlura" src="imagens/Logo.png" alt="Logo da Alura">
+    </header>
+    <main>
+        <section>
+            <div class="imagem-acima">
+                <img src="imagens/pc.png" alt="Imagem de uma pixel art de um computador antigo">
+            </div>
+            <textarea class="text-area" placeholder="Digite seu texto."></textarea>
+            <div class="informacao">
+                <h6>apenas letras minúsculas e sem acento!</h6>
+            </div>
+            <div class="botoes">
+                <button class="btn-encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="btn-desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
+            </div>
+        </section>
+        <section class="saida-section">
+            <div class="imagem-em-cima">
+                <img src="imagens/impressora.png" alt="Imagem de uma pixel art de uma impressora">
+            </div>
+            <textarea class="mensagem"></textarea>
+            <button class="btn-copiar" onclick="copiarTexto()">Copiar</button>
+        </section>
+    </main>
+    <div id="mensagem-copiado" class="mensagem-copiado">Conteúdo copiado!</div>
+    <a href="https://github.com/Alan-Viana" target="_blank" class="btn-github">
+        <img src="imagens/github-icon.png" alt="GitHub" class="github-icon">
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>

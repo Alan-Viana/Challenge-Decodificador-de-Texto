@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+}
+
+body {
+    background: #E5E5E5;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.logoAlura {
+    width: 100px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 120px 150px;
+    flex-wrap: wrap;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.text-area, .mensagem {
+    border: 2px solid #0f0;
+    background-color: #000;
+    color: #0f0;
+    width: 600px;
+    height: 250px;
+    padding: 15px;
+    resize: none;
+    font-size: 25px;
+    text-transform: lowercase;
+}
+
+.text-area:focus, .mensagem:focus {
+    outline: none;
+}
+
+.botoes, .saida-section {
+    display: flex;
+    justify-content: center;
+}
+
+.botoes {
+    gap: 20px;
+}
+
+button {
+    border: 2px solid black;
+    cursor: pointer;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 20px;
+    background: #D8DFE8;
+    color: black;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
+}
+
+.btn-encriptar, .btn-desencriptar {
+    background-color: #808080;
+    color: white;
+}
+
+.btn-copiar {
+    margin-top: 20px;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #b0b0b0;
+}
+
+.informacao {
+    color: #495057;
+    font-size: 25px;
+}
+
+.saida-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.imagem-em-cima, .imagem-acima {
+    margin-bottom: 22px;
+}
+
+.imagem-em-cima img {
+    width: 79px;
+}
+
+.imagem-acima img {
+    width: 80px;
+}
+
+.mensagem-copiado {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #0f0;
+    padding: 10px;
+    border: 1px solid #0f0;
+}
+
+.btn-github {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-github:hover {
+    transform: scale(1.1);
+}
+
+.github-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Responsividade */
+
+/* Desktop - 1600x992px */
+@media (max-width: 1600px) {
+    main {
+        margin: 80px 150px;
+    }
+
+    .text-area, .mensagem {
+        width: 500px;
+        height: 220px;
+    }
+}
+
+/* Laptop - 1280x802px */
+@media (max-width: 1280px) {
+    main {
+        margin: 60px 100px;
+    }
+
+    .text-area, .mensagem {
+        width: 400px;
+        height: 200px;
+    }
+}
+
+/* Tablet - 768x1024px */
+@media (max-width: 768px) {
+    main {
+        margin: 40px 20px;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .text-area, .mensagem {
+        width: 100%;
+        height: 180px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-encriptar, .btn-desencriptar, .btn-copiar {
+        width: 100%;
+    }
+}
+
+/* Mobile - 320x480px */
+@media (max-width: 480px) {
+    .text-area, .mensagem {
+        width: 100%;
+        height: 150px;
+        font-size: 18px;
+    }
+
+    button {
+        font-size: 16px;
+        height: 35px;
+        min-width: 120px;
+    }
+
+    .btn-github {
+        bottom: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .github-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
