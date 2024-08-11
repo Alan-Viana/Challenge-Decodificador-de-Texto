@@ -30,9 +30,10 @@ function btnEncriptar() {
 }
 
 function btnDesencriptar() {
-    const textoEncriptado = mensagem.value;
+    const textoEncriptado = textArea.value;
     const textoDesencriptado = desencriptar(textoEncriptado);
     mensagem.value = textoDesencriptado;
+    textArea.value = "";
 }
 
 function encriptar(stringEncriptada) {   
